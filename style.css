@@ -2,11 +2,16 @@
 <head>
     <title>Movies Home Page</title>
     <style>
-        /* Animated Gradient Background */
+        /* === Keyframes for Gradient Background Animation === */
         @keyframes gradientAnimation {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
+        }
+
+        /* === Reset and Global Styles === */
+        * {
+            box-sizing: border-box;
         }
 
         body {
@@ -19,11 +24,13 @@
             color: #fff;
         }
 
+        /* === Typography === */
         h1 {
             text-align: center;
             font-size: 60px;
             color: #f39c12;
             text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+            margin-top: 40px;
         }
 
         h2 {
@@ -31,41 +38,99 @@
             font-size: 24px;
             color: #8e44ad;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        a {
-            text-decoration: none;
-            color: #00cec9;
-            font-size: 20px;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #d63031;
-            font-weight: bold;
-        }
-
-        marquee {
-            color: #74b9ff;
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        img {
-            display: block;
-            margin: 20px auto;
-            width: 35%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+            margin-bottom: 40px;
         }
 
         h3 {
             text-align: center;
             color: #ffeaa7;
-            margin-top: 20px;
+            margin-top: 30px;
             font-size: 18px;
             text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+        }
+
+        /* === Links and Buttons === */
+        .links {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            display: block;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin: 15px 0;
+            padding: 15px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #00cec9;
+            font-size: 20px;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        }
+
+        a:hover {
+            color: #d63031;
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        /* === Marquee Text === */
+        marquee {
+            color: #74b9ff;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+
+        /* === Image Styling === */
+        img {
+            display: block;
+            margin: 30px auto;
+            width: 50%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+        }
+
+        /* === Footer/Signature Styling === */
+        .footer {
+            background-color: rgba(0,0,0,0.2);
+            padding: 20px;
+            border-top: 2px solid #fff3;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        /* === Responsive Media Query === */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 42px;
+            }
+
+            h2 {
+                font-size: 18px;
+                padding: 0 10px;
+            }
+
+            a {
+                font-size: 18px;
+            }
+
+            img {
+                width: 80%;
+            }
         }
     </style>
 </head>
@@ -73,29 +138,30 @@
     <h1><u>MOVIES</u></h1>
     <h2>THIS SITE GIVES YOU INFORMATION ABOUT MOVIES AND HELP IN GETTING RATINGS ABOUT MOVIES</h2>
 
-    <a href="e:\Users\LENOVO\Desktop\meet_hw_project_1\blockbuster.html">
-        <br>➡ To see blockbuster movies of 2024, click here — BLOCKBUSTER MOVIES<br>
-    </a>
+    <div class="links">
+        <a href="e:\Users\LENOVO\Desktop\meet_hw_project_1\blockbuster.html">
+            ➡ To see blockbuster movies of 2024, click here — BLOCKBUSTER MOVIES
+        </a>
 
-   
         <a href="e:\Users\LENOVO\Desktop\meet_hw_project_1\action.html">
-            <br>➡ To see action movies, click here — ACTION MOVIES<br>
+            ➡ To see action movies, click here — ACTION MOVIES
         </a>
-   
 
-    
         <a href="e:\Users\LENOVO\Desktop\meet_hw_project_1\romantic.html">
-            <br>➡ To see romantic movies, click here — ROMANTIC MOVIES<br><br>
+            ➡ To see romantic movies, click here — ROMANTIC MOVIES
         </a>
-   
-<img src="e:\Users\LENOVO\Desktop\meet_hw_project_1\movie1.jpg" alt="Movie Poster">
+    </div>
 
-    
+    <img src="e:\Users\LENOVO\Desktop\meet_hw_project_1\movie1.jpg" alt="Movie Poster">
 
-    <h3>
-        BY: Krishiv Katariya and Heman Langaliya<br>
-        email: <br>krishivkatariya@gmail.com<br>hemanlangaliya@gmail.com
-        <a href="https://hubdrive.fit/file/1706273351" target="_blank">https://hubdrive.fit/file/1706273351</a>
-    </h3>
+    <div class="footer">
+        <h3>
+            BY: Krishiv Katariya and Heman Langaliya<br>
+            Email:<br>
+            krishivkatariya@gmail.com<br>
+            hemanlangaliya@gmail.com<br>
+            <a href="https://hubdrive.fit/file/1706273351" target="_blank">Movie File Download Link</a>
+        </h3>
+    </div>
 </body>
 </html>
