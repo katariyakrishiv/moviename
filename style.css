@@ -21,7 +21,7 @@
             background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
             background-size: 400% 400%;
             animation: gradientAnimation 15s ease infinite;
-            color: white;
+            color: black;
         }
 
         /* === Typography === */
