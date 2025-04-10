@@ -18,7 +18,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Verdana', sans-serif;
-            background: linear-gradient(270deg, #d0e8f2, #a1cbe6, #89c2d9, #d0e8f2);
+            background: linear-gradient(270deg, #ffffff, #f2f2f2, #e6e6e6, #ffffff);
             background-size: 400% 400%;
             animation: gradientAnimation 15s ease infinite;
             color: black;
