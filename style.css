@@ -80,6 +80,7 @@
 
         /* === Marquee Text === */
         marquee {
+            text-align: center;
             color: #74b9ff;
             font-size: 22px;
             font-weight: bold;
