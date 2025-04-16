@@ -2,50 +2,223 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
-    <title>Action Movies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Movies | Bollywood Vibes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Kaushan+Script&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0047ab; /* Cobalt Blue */
+            --primary-hover: #003a8c;
+            --accent-color: #89c2ff;
+            --text-light: #ffffff;
+            --text-muted: #a8c3e4;
+            --transition-speed: 0.3s;
+            --bg-gradient-start: #001f3f;
+            --bg-gradient-end: #0047ab;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-light);
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Kaushan Script', cursive;
+            color: var(--accent-color);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 u {
+            text-decoration: none;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+        }
+
+        .movie-links {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .movie-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--accent-color);
+            border-radius: 8px;
+            transition: all var(--transition-speed);
+        }
+
+        .movie-links a:hover {
+            background-color: rgba(137, 194, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .movie-content {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--accent-color);
+            padding: 2.5rem;
+            position: relative;
+        }
+
+        .movie-content::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 2px solid var(--accent-color);
+            border-radius: 20px;
+            opacity: 0.2;
+            pointer-events: none;
+        }
+
+        h2 {
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            margin: 1.5rem 0 1rem;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(137, 194, 255, 0.3);
+            padding-bottom: 0.5rem;
+        }
+
+        img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            border: 1px solid var(--accent-color);
+            margin: 1rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform var(--transition-speed);
+        }
+
+        img:hover {
+            transform: scale(1.02);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+        }
+
+        .bollywood-decoration {
+            position: absolute;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            opacity: 0.5;
+        }
+
+        .decoration-1 {
+            top: 10px;
+            left: 15px;
+        }
+
+        .decoration-2 {
+            bottom: 10px;
+            right: 15px;
+            transform: rotate(180deg);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .movie-content {
+                padding: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .movie-content {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1><u><i>ACTION MOVIES</i></u></h1>
+            <span class="bollywood-decoration decoration-1">✧</span>
+            <span class="bollywood-decoration decoration-2">✧</span>
+        </header>
 
-<h1><u><i>ACTION MOVIES</i></u></h1>
+        <div class="movie-links">
+            <a href="index.html">Home</a>
+        </div>
 
-<div class="movie-links">
-    <a href="index.html">Home</a>
-    <link rel="stylesheet" type="text/css" href="index.html" media="screen">
-</div>
+        <div class="movie-content">
+            <h2>1. ANIMAL</h2>
+            <img src="images/animal.jpg" alt="Animal Movie">
+            <p>Release Date: 1 December 2023 (India)<br>
+               Director: Sandeep Reddy Vanga<br>
+               Cast: Ranbir Kapoor, Anil Kapoor, Bobby Deol, Rashmika Mandanna, Triptii Dimri<br>
+               Running Time: 3h 21m</p>
 
-<div class="movie-content">
-    <h2>1. ANIMAL</h2>
-    <img src="images/animal.jpg" alt="Animal Movie">
-    <p>Release Date: 1 December 2023 (India)<br>
-       Director: Sandeep Reddy Vanga<br>
-       Cast: Ranbir Kapoor, Anil Kapoor, Bobby Deol, Rashmika Mandanna, Triptii Dimri<br>
-       Running Time: 3h 21m</p>
+            <h2>2. MARCO</h2>
+            <img src="images/marco.jpg" alt="Marco Movie">
+            <p>Release Date: 20 December 2024 (India)<br>
+               Director: Haneef Adeni<br>
+               Music: Ravi Basrur<br>
+               Producer: Cubes Shareef Muhammed</p>
+            
+            <h2>3. PUSHPA: The Rise</h2>
+            <img src="images/pushpa1.jpg" alt="Pushpa Movie">
+            <p>Director: Sukumar<br>
+               Running Time: 3h 21m<br>
+               Cast: Allu Arjun, Rashmika Mandanna</p>
 
-    <h2>2. MARCO</h2>
-    <img src="images/marco.jpg" alt="Marco Movie">
-    <p>Release Date: 20 December 2024 (India)<br>
-       Director: Haneef Adeni<br>
-       Music: Ravi Basrur<br>
-       Producer: Cubes Shareef Muhammed</p>
-    
-    <h2>3. PUSHPA: The Rise</h2>
-    <img src="images/pushpa1.jpg" alt="Pushpa Movie">
-    <p>Director: Sukumar<br>
-       Running Time: 3h 21m<br>
-       Cast: Allu Arjun, Rashmika Mandanna</p>
+            <h2>4. PUSHPA 2: The Rule</h2>
+            <img src="images/pushpa2.jpg" alt="Pushpa 2 Movie">
+            <p>Director: Sukumar<br>
+               Running Time: 3h 21m<br>
+               Cast: Allu Arjun, Rashmika Mandanna</p>
 
-    <h2>4. PUSHPA 2: The Rule</h2>
-    <img src="images/pushpa2.jpg" alt="Pushpa 2 Movie">
-    <p>Director: Sukumar<br>
-       Running Time: 3h 21m<br>
-       Cast: Allu Arjun, Rashmika Mandanna</p>
-
-    <h2>5. SALAAR</h2>
-    <img src="images/salaar.jpg" alt="Salaar Movie">
-    <p>Director: Prashanth Neel<br>
-       Cast: Prabhas, Prithviraj Sukumaran, Shruti Haasan</p>
-</div>
-
+            <h2>5. SALAAR</h2>
+            <img src="images/salaar.jpg" alt="Salaar Movie">
+            <p>Director: Prashanth Neel<br>
+               Cast: Prabhas, Prithviraj Sukumaran, Shruti Haasan</p>
+        </div>
+    </div>
 </body>
 </html>
