@@ -1,168 +1,268 @@
-<html>
-<head>
-    <title>Movies Home Page</title>
-    <style>
-        /* === Keyframes for Gradient Background Animation === */
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+/* === Modern CSS Variables === */
+:root {
+    --primary: #6a11cb;
+    --secondary: #2575fc;
+    --accent: #f39c12;
+    --dark: #1a1a2e;
+    --light: #f8f9fa;
+    --success: #00b894;
+    --text: #333333;
+    --text-light: #f8f9fa;
+}
 
-        /* === Reset and Global Styles === */
-        * {
-            box-sizing: border-box;
-        }
+/* === Base Reset & Global Styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Verdana', sans-serif;
-            background: #ffffff;
-            background-size: 400% 400%;
-            animation: gradientAnimation 15s ease infinite;
-            color: black;
-        }
+body {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
 
-        /* === Typography === */
-        h1 {
-            text-align: center;
-            font-size: 60px;
-            color: #f39c12;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
-            margin-top: 40px;
-        }
+/* === Typography === */
+h1 {
+    font-size: 3.5rem;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    margin: 2rem 0 1rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    position: relative;
+    padding-bottom: 1rem;
+}
 
-        h2 {
-            text-align: center;
-            font-size: 24px;
-            color: #8e44ad;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            margin-bottom: 40px;
-        }
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 2px;
+}
 
-        h3 {
-            text-align: center;
-            color:dark green;
-            margin-top: 30px;
-            font-size: 18px;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-        }
+h2 {
+    font-size: 1.5rem;
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
+}
 
-        /* === Links and Buttons === */
-        .links {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+h3 {
+    color: var(--dark);
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    text-align: center;
+}
 
-        a {
-            display: block;
-            background-color: rgba(255, 255, 255, 0.1);
-            margin: 15px 0;
-            padding: 15px 20px;
-            border-radius: 12px;
-            text-decoration: none;
-            color: #00cec9;
-            font-size: 20px;
-            text-align: center;
-            transition: all 0.4s ease;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-        }
+/* === Navigation Links === */
+.links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+}
 
-        a:hover {
-            color: #d63031;
-            background-color: rgba(255, 255, 255, 0.2);
-            transform: scale(1.05);
-            font-weight: bold;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-        }
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
 
-        /* === Marquee Text === */
-        marquee {
-            text-align: center;
-            color: #74b9ff;
-            font-size: 22px;
-            font-weight: bold;
-            margin: 30px 0;
-        }
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
 
-        /* === Image Styling === */
-        img {
-            display: block;
-            margin: 30px auto;
-            width: 50%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 20px;
-            box-shadow: 0 12px 25px rgba(0,0,0,0.5);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
+.nav-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.05);
+    color: var(--primary);
+}
 
-        img:hover {
-            transform: scale(1.03);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.6);
-        }
+.nav-link i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary);
+}
 
-        /* === Footer/Signature Styling === */
-        .footer {
-            background-color: rgba(0,0,0,0.2);
-            padding: 20px;
-            border-top: 2px solid #fff3;
-            margin-top: 40px;
-            text-align: center;
-            font-size: 16px;
-        }
+.nav-link span {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+}
 
-        /* === Responsive Media Query === */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 42px;
-            }
+/* === Hero Image === */
+.hero-image {
+    display: block;
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 16px;
+    margin: 3rem auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border: 8px solid white;
+    transition: transform 0.3s ease;
+}
 
-            h2 {
-                font-size: 18px;
-                padding: 0 10px;
-            }
+.hero-image:hover {
+    transform: scale(1.02);
+}
 
-            a {
-                font-size: 18px;
-            }
+/* === Marquee === */
+.marquee-container {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 1rem 0;
+    margin: 2rem 0;
+    overflow: hidden;
+}
 
-            img {
-                width: 80%;
-            }
-        }
-    </style>
-</head>
-<body>
-    <h1><u>MOVIES</u></h1>
-    <h2>THIS SITE GIVES YOU INFORMATION ABOUT MOVIES AND HELP IN GETTING RATINGS ABOUT MOVIES</h2>
+marquee {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
 
-    <div class="links">
-        <a href="e:\Users\LENOVO\Desktop\meet_hw_project_1\blockbuster.html">
-            ➡ To see blockbuster movies of 2024, click here — BLOCKBUSTER MOVIES
-        </a>
+/* === Footer === */
+.footer {
+    background: linear-gradient(135deg, var(--dark), #16213e);
+    color: var(--text-light);
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+    position: relative;
+}
 
-        <a href="e:\Users\LENOVO\Desktop\meet_hw_project_1\action.html">
-            ➡ To see action movies, click here — ACTION MOVIES
-        </a>
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
 
-        <a href="e:\Users\LENOVO\Desktop\meet_hw_project_1\romantic.html">
-            ➡ To see romantic movies, click here — ROMANTIC MOVIES
-        </a>
-    </div>
+.footer h3 {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
 
-   <img src="https://github.com/katariyakrishiv/moviename/blob/4d8fe52e59351155022ff30a2609aa4516ae5e53/a.jpg" alt="Welcome to our site">
+.footer a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin: 0.5rem 0;
+}
 
-    <div class="footer">
-        <h3>
-            BY: Krishiv Katariya and Heman Langaliya<br>
-            Email:<br>
-            krishivkatariya@gmail.com<br>
-            hemanlangaliya@gmail.com<br>
-            <a href="https://hubdrive.fit/file/1706273351" target="_blank">Movie File Download Link</a>
-        </h3>
-    </div>
-</body>
-</html>
+.footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.download-link {
+    margin: 1rem 0;
+}
+
+.credits {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        margin-top: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .links {
+        grid-template-columns: 1fr;
+        padding: 0 1.5rem;
+    }
+
+    .hero-image {
+        width: 90%;
+        margin: 2rem auto;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .nav-link span {
+        font-size: 1.1rem;
+    }
+}
+
+/* === Animation Effects === */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.links, .hero-image, .footer {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.links {
+    animation-delay: 0.2s;
+}
+
+.hero-image {
+    animation-delay: 0.4s;
+}
+
+.footer {
+    animation-delay: 0.6s;
+}
