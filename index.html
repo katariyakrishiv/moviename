@@ -2,123 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Movie Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieHub - Your Ultimate Movie Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        body {
-            background-color: #19334d; /* Dark cobalt blue background */
-            color: #ffffff; /* White text */
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-        
-        h1 {
-            color: #ffffff; /* White title color */
-            text-align: center;
-            padding: 15px;
-            border-bottom: 3px solid #ffffff; /* White border */
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px #000033; /* Dark blue shadow */
-        }
-        
-        h3 {
-            color: #b3d1ff; /* Light blue */
-            text-align: center;
-            margin: 15px 0;
-            background-color: #000033; /* Dark blue background */
-            padding: 10px;
-            border-radius: 5px;
-        }
-        
-        .movie-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 30px 0;
-            flex-wrap: wrap;
-        }
-        
-        .movie-links a {
-            background-color: #0047b3; /* Deep cobalt blue */
+        /* Added button styles directly in HTML for quick reference */
+        .login-btn {
+            display: inline-block;
+            background-color: #e50914; /* Netflix red for movie theme */
             color: white;
-            padding: 12px 25px;
+            padding: 10px 25px;
+            border-radius: 4px;
             text-decoration: none;
-            border-radius: 5px;
-            transition: all 0.3s;
-            border: 2px solid #66b3ff; /* Light blue border */
             font-weight: bold;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border: none;
+            cursor: pointer;
         }
         
-        .movie-links a:hover {
-            background-color: #0066ff; /* Brighter blue */
-            color: #ffcc00; /* Yellow text on hover */
-            transform: scale(1.05);
-            border-color: #ffffff; /* White border on hover */
+        .login-btn:hover {
+            background-color: #f40612;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
         
-        figure {
-            text-align: center;
-            margin: 30px auto;
-            max-width: 80%;
-            background-color: #000033; /* Dark blue background */
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px #4d94ff; /* Cobalt blue glow */
-        }
-        
-        figcaption {
-            color: #ffcc00; /* Yellow caption */
-            margin-top: 10px;
-            font-style: italic;
-            font-size: 1.1em;
-        }
-        
-        img {
-            border: 3px solid #ffcc00; /* Yellow border */
-            border-radius: 5px;
-            max-width: 100%;
-            height: auto;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        }
-        
-        .credits {
-            background-color: #000033; /* Dark blue background */
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 30px;
-            border-left: 5px solid #ffcc00; /* Yellow accent */
-        }
-        
-        .credits br {
-            display: block;
-            margin: 5px 0;
+        .login-btn i {
+            margin-right: 8px;
         }
     </style>
 </head>
 <body>
-    
-<h1>
-    <b><u>MOVIES</u></b>
-</h1>
+    <h1>MovieHub</h1>
+    <h2>Your Ultimate Guide to Blockbuster Hits, Action Thrills, and Romantic Stories</h2>
 
-<h3>
-    THIS SITE GIVES YOU INFORMATION ABOUT MOVIES AND HELPS IN GETTING RATINGS ABOUT MOVIES
-</h3>
+    <div class="links">
+        <a href="blockbuster.html" class="nav-link">
+            <i class="fas fa-film"></i>
+            <span>Blockbuster Movies of 2024</span>
+        </a>
 
-<div class="movie-links">
-    <a href="blockbuster.html">Blockbuster Movies 2024</a>
-    <a href="action.html">Action Movies</a>
-    <a href="romantic.html">Romantic Movies</a>
-</div>
+        <a href="action.html" class="nav-link">
+            <i class="fas fa-explosion"></i>
+            <span>Action & Adventure Movies</span>
+        </a>
 
-   
+        <a href="romantic.html" class="nav-link">
+            <i class="fas fa-heart"></i>
+            <span>Romantic Movies Collection</span>
+        </a>
+    </div>
 
-<div class="credits">
-<h3>
-    BY:- Krishiv Katariya and Heman Langaliya<br>
-    Mail: <br> krishivkatariya@gmail.com <br> hemanlangaliya@gmail.com
-</h3>
-</div>
+    <div class="marquee-container">
+        <marquee>✨ Now Showing: Check out the latest movie ratings and reviews! ✨ &nbsp;&nbsp;&nbsp; 🎬 Coming Soon: Exciting new releases next month! 🎬</marquee>
+    </div>
 
+    <img src="images/movie-hero.jpg" alt="MovieHub - Your Cinema Paradise" class="hero-image">
+
+    <div class="footer">
+        <h3>Created With By</h3>
+        <div>
+            <a href="mailto:krishivkatariya@gmail.com">Krishiv Katariya</a> & 
+            <a href="mailto:hemanlangaliya@gmail.com">Heman Langaliya</a>
+        </div>
+        <div class="download-link">
+            <a href="https://hubdrive.fit/file/1706273351" target="_blank">Download Movie Collection</a>
+        </div>
+        <a href="login.html" class="login-btn">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </a>
+        <div class="credits">
+            © 2024 MovieHub | All Rights Reserved
+        </div>
+    </div>
 </body>
 </html>
