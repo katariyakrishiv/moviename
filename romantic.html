@@ -2,51 +2,196 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
-    <title>Romantic Movies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Movies | MovieHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Romantic movies specific styles */
+        .romantic-movies {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 3rem;
+        }
+
+        .movie-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .movie-poster {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .movie-details {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .movie-title {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .movie-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 3px;
+        }
+
+        .movie-info {
+            margin-bottom: 1.5rem;
+        }
+
+        .movie-info p {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .movie-info strong {
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .movie-synopsis {
+            font-style: italic;
+            color: #555;
+            line-height: 1.6;
+            border-left: 3px solid var(--accent);
+            padding-left: 1rem;
+        }
+
+        .home-link {
+            display: inline-block;
+            margin: 2rem auto;
+            text-align: center;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 900px) {
+            .movie-card {
+                grid-template-columns: 1fr;
+            }
+            
+            .movie-poster {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .romantic-movies {
+                padding: 0 1rem 2rem;
+            }
+            
+            .movie-details {
+                padding: 1.5rem;
+            }
+            
+            .movie-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <h1>Romantic Movies</h1>
+    <h2>Heartwarming Stories of Love and Passion</h2>
 
-<h1><u><i>ROMANTIC MOVIES</i></u></h1>
+    <div class="romantic-movies">
+        <!-- Movie 1 -->
+        <div class="movie-card">
+            <img src="images/tjmm.jpg" alt="Tu Jhoothi Main Makkaar" class="movie-poster">
+            <div class="movie-details">
+                <h2 class="movie-title">Tu Jhoothi Main Makkaar</h2>
+                <div class="movie-info">
+                    <p><strong>Release Date:</strong> March 8, 2023</p>
+                    <p><strong>Director:</strong> Luv Ranjan</p>
+                    <p><strong>Cast:</strong> Ranbir Kapoor, Shraddha Kapoor</p>
+                    <p><strong>Runtime:</strong> 2h 39m</p>
+                </div>
+                <p class="movie-synopsis">A romantic comedy about a breakup consultant who falls in love, only to discover his girlfriend has hired him to break up with her.</p>
+            </div>
+        </div>
 
-<div class="movie-links">
-    <a href="index.html">Home</a>
-     <link rel="stylesheet" type="text/css" href="index.html" media="screen">
-</div>
+        <!-- Movie 2 -->
+        <div class="movie-card">
+            <img src="images/aashiqui2.jpg" alt="Aashiqui 2" class="movie-poster">
+            <div class="movie-details">
+                <h2 class="movie-title">Aashiqui 2</h2>
+                <div class="movie-info">
+                    <p><strong>Release Date:</strong> April 26, 2013</p>
+                    <p><strong>Director:</strong> Mohit Suri</p>
+                    <p><strong>Cast:</strong> Aditya Roy Kapur, Shraddha Kapoor</p>
+                    <p><strong>Music:</strong> Ankit Tiwari, Mithoon</p>
+                </div>
+                <p class="movie-synopsis">A passionate love story between a fading musician and his protege who rises to fame while he battles his personal demons.</p>
+            </div>
+        </div>
 
-<div class="movie-content">
-    <h2>1. TU JOOTHI HAI MAKKAAR</h2>
-    <img src="images/tjmm.jpg" alt="TU JOOTHI HAI MAKKAAR Movie">
- <p class="center-text">
-    <p>Initial Release: 8 March 2023<br>
-       Director: Luv Ranjan<br>
-       Cast: Ranbir Kapoor, Shraddha Kapoor</p>
-</p>
-    
-    <h2>2. AASHIQUE 2</h2>
-    <img src="images/aashiqui2.jpg" alt="Aashique 2 Movie">
-    <p class="center-text">
-    <p>Release Date: 26 April 2013<br>
-       Director: Mohit Suri<br>
-       Music: Ankit Tiwari, Mithoon</p>
-</p>
-    
-    <h2>3. TAMASHA</h2>
-    <img src="images/tamasha.jpg" alt="Tamasha Movie">
-   <p class="center-text">
-       <p>Release Date: 27 november 2015<br>
-          Director: Imtiaz Ali<br>
-          Running Time: 2h 14m</p>
-</p>
-    
-    <h2>4. JAB WE MET</h2>
-    <img src="images/jabwemet.jpg" alt="Jab We Met Movie">
-  <p class="center-text">
-    <p>Release Date: 26 October 2007<br>
-       Director: Imtiaz Ali<br>
-       Music Director: Pritam</p>
-</p>
-</div>
+        <!-- Movie 3 -->
+        <div class="movie-card">
+            <img src="images/tamasha.jpg" alt="Tamasha" class="movie-poster">
+            <div class="movie-details">
+                <h2 class="movie-title">Tamasha</h2>
+                <div class="movie-info">
+                    <p><strong>Release Date:</strong> November 27, 2015</p>
+                    <p><strong>Director:</strong> Imtiaz Ali</p>
+                    <p><strong>Cast:</strong> Ranbir Kapoor, Deepika Padukone</p>
+                    <p><strong>Runtime:</strong> 2h 14m</p>
+                </div>
+                <p class="movie-synopsis">A journey of self-discovery where Ved remembers the storyteller he wanted to be and breaks free from his corporate life to follow his passion.</p>
+            </div>
+        </div>
 
+        <!-- Movie 4 -->
+        <div class="movie-card">
+            <img src="images/jabwemet.jpg" alt="Jab We Met" class="movie-poster">
+            <div class="movie-details">
+                <h2 class="movie-title">Jab We Met</h2>
+                <div class="movie-info">
+                    <p><strong>Release Date:</strong> October 26, 2007</p>
+                    <p><strong>Director:</strong> Imtiaz Ali</p>
+                    <p><strong>Cast:</strong> Shahid Kapoor, Kareena Kapoor</p>
+                    <p><strong>Music:</strong> Pritam</p>
+                </div>
+                <p class="movie-synopsis">A depressed businessman meets a vivacious young woman on a train journey who changes his outlook on life and love forever.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="marquee-container">
+        <marquee>❤️ Fall in love with these timeless romantic stories ❤️ &nbsp;&nbsp;&nbsp; 💑 Perfect movies to watch with your special someone 💑</marquee>
+    </div>
+
+    <div class="footer">
+        <a href="index.html" class="home-link">
+            <i class="fas fa-arrow-left"></i> Back to MovieHub Home
+        </a>
+    </div>
 </body>
 </html>
