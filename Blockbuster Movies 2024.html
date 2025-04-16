@@ -2,51 +2,222 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
-    <title>Blockbuster Movies 2024</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockbuster Movies 2024 | MovieHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Additional styles specific to blockbuster page */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+            padding: 0 2rem;
+        }
+
+        .movie-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .movie-poster {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .movie-info {
+            padding: 1.5rem;
+        }
+
+        .movie-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .movie-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .rating {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .genre {
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 2rem auto;
+            text-align: center;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .movie-grid {
+                grid-template-columns: 1fr;
+                padding: 0 1rem;
+            }
+            
+            .movie-poster {
+                height: 350px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <h1>2024 Blockbusters</h1>
+    <h2>The Biggest and Most Anticipated Movies of the Year</h2>
 
-<h1><u><i>Blockbuster Movies 2024</i></u></h1>
+    <div class="movie-grid">
+        <!-- Movie 1 -->
+        <div class="movie-card">
+            <img src="images/dune2.jpg" alt="Dune: Part Two" class="movie-poster">
+            <div class="movie-info">
+                <h3 class="movie-title">Dune: Part Two</h3>
+                <div class="movie-meta">
+                    <span>March 1, 2024</span>
+                    <span class="rating">⭐ 8.9/10</span>
+                </div>
+                <div>
+                    <span class="genre">Sci-Fi</span>
+                    <span class="genre">Adventure</span>
+                    <span class="genre">Drama</span>
+                </div>
+                <p>Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.</p>
+            </div>
+        </div>
 
-<div class="movie-links">
-    <a href="index.html">Home</a>
-     <link rel="stylesheet" type="text/css" href="index.html" media="screen">
-</div>
+        <!-- Movie 2 -->
+        <div class="movie-card">
+            <img src="images/deadpool3.jpg" alt="Deadpool & Wolverine" class="movie-poster">
+            <div class="movie-info">
+                <h3 class="movie-title">Deadpool & Wolverine</h3>
+                <div class="movie-meta">
+                    <span>July 26, 2024</span>
+                    <span class="rating">⭐ 8.5/10</span>
+                </div>
+                <div>
+                    <span class="genre">Action</span>
+                    <span class="genre">Comedy</span>
+                    <span class="genre">Superhero</span>
+                </div>
+                <p>Deadpool teams up with Wolverine for an adventure that will change the Marvel Cinematic Universe forever.</p>
+            </div>
+        </div>
 
-<div class="movie-content">
-    <h2>1. TU JOOTHI HAI MAKKAAR</h2>
-    <img src="images/tjmm.jpg" alt="TU JOOTHI HAI MAKKAAR Movie">
- <p class="center-text">
-    <p>Initial Release: 8 March 2023<br>
-       Director: Luv Ranjan<br>
-       Cast: Ranbir Kapoor, Shraddha Kapoor</p>
-</p>
-    
-    <h2>2. AASHIQUE 2</h2>
-    <img src="images/aashiqui2.jpg" alt="Aashique 2 Movie">
-    <p class="center-text">
-    <p>Release Date: 26 April 2013<br>
-       Director: Mohit Suri<br>
-       Music: Ankit Tiwari, Mithoon</p>
-</p>
-    
-    <h2>3. TAMASHA</h2>
-    <img src="images/tamasha.jpg" alt="Tamasha Movie">
-   <p class="center-text">
-       <p>Release Date: 27 november 2015<br>
-          Director: Imtiaz Ali<br>
-          Running Time: 2h 14m</p>
-</p>
-    
-    <h2>4. JAB WE MET</h2>
-    <img src="images/jabwemet.jpg" alt="Jab We Met Movie">
-  <p class="center-text">
-    <p>Release Date: 26 October 2007<br>
-       Director: Imtiaz Ali<br>
-       Music Director: Pritam</p>
-</p>
-</div>
+        <!-- Movie 3 -->
+        <div class="movie-card">
+            <img src="images/joker2.jpg" alt="Joker: Folie à Deux" class="movie-poster">
+            <div class="movie-info">
+                <h3 class="movie-title">Joker: Folie à Deux</h3>
+                <div class="movie-meta">
+                    <span>October 4, 2024</span>
+                    <span class="rating">⭐ 8.7/10</span>
+                </div>
+                <div>
+                    <span class="genre">Crime</span>
+                    <span class="genre">Drama</span>
+                    <span class="genre">Thriller</span>
+                </div>
+                <p>Arthur Fleck finds love in Arkham Asylum with fellow patient Harleen Quinzel in this musical sequel.</p>
+            </div>
+        </div>
 
+        <!-- Movie 4 -->
+        <div class="movie-card">
+            <img src="images/gladiator2.jpg" alt="Gladiator II" class="movie-poster">
+            <div class="movie-info">
+                <h3 class="movie-title">Gladiator II</h3>
+                <div class="movie-meta">
+                    <span>November 22, 2024</span>
+                    <span class="rating">⭐ 8.8/10</span>
+                </div>
+                <div>
+                    <span class="genre">Action</span>
+                    <span class="genre">Drama</span>
+                    <span class="genre">Historical</span>
+                </div>
+                <p>Lucius, the son of Lucilla, must fight for his life in the Colosseum years after Maximus' death.</p>
+            </div>
+        </div>
+
+        <!-- Movie 5 -->
+        <div class="movie-card">
+            <img src="images/venom3.jpg" alt="Venom 3" class="movie-poster">
+            <div class="movie-info">
+                <h3 class="movie-title">Venom 3</h3>
+                <div class="movie-meta">
+                    <span>November 8, 2024</span>
+                    <span class="rating">⭐ 8.3/10</span>
+                </div>
+                <div>
+                    <span class="genre">Action</span>
+                    <span class="genre">Sci-Fi</span>
+                    <span class="genre">Horror</span>
+                </div>
+                <p>Eddie Brock and Venom face their most dangerous enemy yet in the explosive third installment.</p>
+            </div>
+        </div>
+
+        <!-- Movie 6 -->
+        <div class="movie-card">
+            <img src="images/avatar3.jpg" alt="Avatar 3" class="movie-poster">
+            <div class="movie-info">
+                <h3 class="movie-title">Avatar 3</h3>
+                <div class="movie-meta">
+                    <span>December 19, 2024</span>
+                    <span class="rating">⭐ 9.1/10</span>
+                </div>
+                <div>
+                    <span class="genre">Sci-Fi</span>
+                    <span class="genre">Adventure</span>
+                    <span class="genre">Fantasy</span>
+                </div>
+                <p>James Cameron returns with the next chapter in the epic Avatar saga, introducing new Na'vi cultures.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to MovieHub Home
+        </a>
+        <h3>Created By</h3>
+        <div>
+            <a href="mailto:krishivkatariya@gmail.com">Krishiv Katariya</a> & 
+            <a href="mailto:hemanlangaliya@gmail.com">Heman Langaliya</a>
+        </div>
+        <div class="credits">
+            © 2024 MovieHub | All Rights Reserved
+        </div>
+    </div>
 </body>
 </html>
