@@ -1,81 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>MovieHub - Your Ultimate Movie Guide</title>
-	<link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-	<style>
-    	/* Added button styles directly in HTML for quick reference */
-    	.login-btn {
-        	display: inline-block;
-        	background-color: #e50914; /* Netflix red for movie theme */
-        	color: white;
-        	padding: 10px 25px;
-        	border-radius: 4px;
-        	text-decoration: none;
-        	font-weight: bold;
-        	margin: 10px 0;
-        	transition: all 0.3s ease;
-        	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        	border: none;
-        	cursor: pointer;
-    	}
-   	 
-    	.login-btn:hover {
-        	background-color: #f40612;
-        	transform: translateY(-2px);
-        	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    	}
-   	 
-    	.login-btn i {
-        	margin-right: 8px;
-    	}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieHub - Your Ultimate Movie Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Added video container styling */
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Existing button styles */
+        .login-btn {
+            display: inline-block;
+            background-color: #e50914;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .login-btn:hover {
+            background-color: #f40612;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        .login-btn i {
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
-	<h1>MovieHub</h1>
-	<h2>Your Ultimate Guide to Blockbuster Hits, Action Thrills, and Romantic Stories</h2>
+    <h1>MovieHub</h1>
+    <h2>Your Ultimate Guide to Blockbuster Hits, Action Thrills, and Romantic Stories</h2>
 
-	<div class="links">
-    	<a href="blockbuster.html" class="nav-link">
-        	<i class="fas fa-film"></i>
-        	<span>Blockbuster Movies of 2024</span>
-    	</a>
+    <div class="links">
+        <a href="blockbuster.html" class="nav-link">
+            <i class="fas fa-film"></i>
+            <span>Blockbuster Movies of 2024</span>
+        </a>
 
-    	<a href="action.html" class="nav-link">
-        	<i class="fas fa-explosion"></i>
-        	<span>Action & Adventure Movies</span>
-    	</a>
+        <a href="action.html" class="nav-link">
+            <i class="fas fa-explosion"></i>
+            <span>Action & Adventure Movies</span>
+        </a>
 
-    	<a href="romantic.html" class="nav-link">
-        	<i class="fas fa-heart"></i>
-        	<span>Romantic Movies Collection</span>
-    	</a>
-	</div>
+        <a href="romantic.html" class="nav-link">
+            <i class="fas fa-heart"></i>
+            <span>Romantic Movies Collection</span>
+        </a>
+    </div>
 
-	<div class="marquee-container">
-    	<marquee>✨ Now Showing: Check out the latest movie ratings and reviews! ✨ &nbsp;&nbsp;&nbsp; 🎬 Coming Soon: Exciting new releases next month! 🎬</marquee>
-	</div>
+    <div class="marquee-container">
+        <marquee>✨ Now Showing: Check out the latest movie ratings and reviews! ✨ &nbsp;&nbsp;&nbsp; 🎬 Coming Soon: Exciting new releases next month! 🎬</marquee>
+    </div>
 
-	<img src="images/movie-hero.jpg" alt="MovieHub - Your Cinema Paradise" class="hero-image">
+    <!-- Video Section Added Here -->
+    <div class="video-container">
+        <video controls autoplay muted loop width="100%">
+            <source src="Untitled-Made with FlexClip.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 
-	<div class="footer">
-    	<h3>Created by</h3>
-    	<div>
-        	<a href="mailto:krishivkatariya@gmail.com">Krishiv Katariya</a> &
-        	<a href="mailto:hemanlangaliya@gmail.com">Heman Langaliya</a>
-    	</div>
-    	<div class="download-link">
-        	<a href="https://hubdrive.fit/file/1706273351" target="_blank">Download Movie Collection</a>
-    	</div>
-    	<a href="login.html" class="login-btn">
-        	<i class="fas fa-sign-in-alt"></i> Login
-    	</a>
-    	<div class="credits">
-        	© 2024 MovieHub | All Rights Reserved
-    	</div>
-	</div>
+
+    <div class="footer">
+        <h3>Created by</h3>
+        <div>
+            <a href="mailto:krishivkatariya@gmail.com">Krishiv Katariya</a> & 
+            <a href="mailto:hemanlangaliya@gmail.com">Heman Langaliya</a>
+        </div>
+        <div class="download-link">
+            <a href="https://hubdrive.fit/file/1706273351" target="_blank">Download Movie Collection</a>
+        </div>
+        <a href="login.html" class="login-btn">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </a>
+        <div class="credits">
+            © 2024 MovieHub | All Rights Reserved
+        </div>
+    </div>
 </body>
 </html>
